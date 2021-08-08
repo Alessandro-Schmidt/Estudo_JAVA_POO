@@ -27,6 +27,20 @@ public class aula1 {
     Fim do método
 
     Fim da classe.
+    Instanciar -->> Quando conseguimos tranformar uma classe (Molde) em Objeto.
+    C1 (nome do objeto) = Nova Caneta (molde)
+    C1.cor = Azul
+    C1.tampada = False
+    C1.ponta = 0.5
+    C1.rabiscar()
+    <<<<<<<<<<<>>>>>>>>>>
+    C2 = nova caneta
+    c2.cor = "vermelho"
+    c2.tampada = Falso
+    c2.tampar()
+    <<<<<<<>>>>>>>
+    Classe: Define os atributos e métodos comuns que serão compartilhados por um objeto;
+    Objeto: é uma instância de uma classe. 
 
     */
 
