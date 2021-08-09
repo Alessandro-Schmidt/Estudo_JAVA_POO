@@ -1,4 +1,4 @@
-public class aula1 {
+public class aula1_notes {
     // Isso é como se faz um comentário em Java.
     /*
     Assim, comentários em várias linhas. 
