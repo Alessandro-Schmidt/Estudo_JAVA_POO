@@ -12,8 +12,10 @@ public class Caneta {
         System.out.println("Seu modelo: " + this.modelo);
         System.out.println("Uma caneta "+ this.cor);
         System.out.println("Está tampada? "+this.tampada);
+        System.out.println("A dela está em "+this.carga+"%");
+        System.out.println("<<<<<<<<<<<");
         /* 
-        Aqui declaramos uma funcionalidade, cujo objetivo é printar o status da caneta
+        Aqui declaramos uma |Método| (funcionalidade), cujo objetivo é printar o status da caneta
         */
 
     }
@@ -22,10 +24,11 @@ public class Caneta {
 
     }
     void tampar(){
+        this.tampada = true;
 
     }
     void destampar(){
-
+        this.tampada = false;
     }
 
 
