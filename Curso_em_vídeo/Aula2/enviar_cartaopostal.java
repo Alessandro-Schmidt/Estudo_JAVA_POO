@@ -13,6 +13,9 @@ public class enviar_cartaopostal {
 
     void status(){
         System.out.printf("Veio do país %s e vai para o país %s",this.paisdeorigem, this.paisdestino);
+        System.out.printf("\nA mensagem: %s",this.mensagem);
+        System.out.printf("Vão demorar %d dias até a entrega",this.dias_ate_entrega);
+
     }
 
 }
