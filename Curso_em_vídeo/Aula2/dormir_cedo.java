@@ -25,9 +25,11 @@ public class dormir_cedo {
             this.estar_pronto = true;
         }else{
             System.out.printf("\nDormi até demais! ");
-        }
-        void tomar_cafe(){
             this.estar_pronto = true;
         }
+
+    }
+    void tomar_cafe(){
+        this.estar_pronto = true;
     }
 }
