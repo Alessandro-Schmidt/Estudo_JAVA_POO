@@ -1,6 +1,6 @@
 package Aula2;
 
-public class pessoal_aula2 {
+public class dormir_cedo {
     String dia_da_semana;
     String aula_do_dia;
     boolean dormir_bem;
@@ -17,11 +17,17 @@ public class pessoal_aula2 {
 
     void cochilar(){
         if (this.horas_sono<8){
-            System.out.printf("Dormi menos de 8 horas! preciso descansar!\nDormi apenas %d horas!", this.horas_sono);
+            System.out.printf("\nDormi menos de 8 horas! preciso descansar!\nDormi apenas %d horas!", this.horas_sono);
             this.horas_sono+=1;
-            System.out.printf("Dormi mais uma hora. Agora tenho %d horas de sono.",this.horas_sono);
+            System.out.printf("\nDormi mais uma hora. Agora tenho %d horas de sono.",this.horas_sono);
+        }else if (this.horas_sono==8){
+            System.out.printf("\nNem preciso de cochilo! Dormi %d horas!",this.horas_sono);
+            this.estar_pronto = true;
         }else{
-            System.out.printf("Nem preciso de cochilo! Dormi %d horas!",this.horas_sono);
+            System.out.printf("\nDormi até demais! ");
+        }
+        void tomar_cafe(){
+            this.estar_pronto = true;
         }
     }
 }
