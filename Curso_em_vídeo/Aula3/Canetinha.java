@@ -8,7 +8,7 @@ public class Canetinha {
     public String cor;
     private float ponta;
     protected int carga;
-    protected boolean tampada;
+    private boolean tampada;
 
     public void status(){
         System.out.println("\nEsta é a caneta ");
@@ -24,7 +24,7 @@ public class Canetinha {
 
     }
 
-    public void rabiscar(){ // outro método
+    private void rabiscar(){ // outro método
         if (this.tampada ==true){ // IMPORTANTE: ESTRUTURA IF E ELSE;
             System.out.println("Eita! Eu não consigo rabiscar com a caneta tampada!");
         } else{
@@ -32,13 +32,13 @@ public class Canetinha {
         }
 
     }
-    protected void tampar(){
+    public void tampar(){
         this.tampada = true; // This significa o objeto que foi chamado, pois o comando ficará: Referência ao objeto que o chamou;
         // Objeto c1.tampar()
         //Sacaste?
 
     }
-    protected void destampar(){
+    public void destampar(){
         System.out.println("Destampei! Agora posso usar.");
         this.tampada = false;
     }
