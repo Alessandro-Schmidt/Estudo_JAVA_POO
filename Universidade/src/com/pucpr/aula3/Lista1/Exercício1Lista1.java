@@ -6,6 +6,9 @@ public class Exercício1Lista1 {
     public static void main(String[] args) {
         int num1, num2, soma;
         Scanner scanner =
-        for (int i = num1; i<=)
+        for (int i = num1; i<=);
+        /*
+        A resolução deste exercício ainda está pendente!
+        */
     }
 }
