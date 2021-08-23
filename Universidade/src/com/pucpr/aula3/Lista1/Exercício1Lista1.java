@@ -9,6 +9,7 @@ public class Exercício1Lista1 {
         for (int i = num1; i<=);
         /*
         A resolução deste exercício ainda está pendente!
+        Ainda preciso concluir isso! Assistir a aula, no caso! 
         */
     }
 }
