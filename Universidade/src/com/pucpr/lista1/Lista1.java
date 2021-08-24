@@ -141,5 +141,4 @@ public class Lista1 {
             print_ano_salario(i,salario);
         }
     }
-
 }
