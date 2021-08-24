@@ -64,8 +64,59 @@ public class Lista1 {
         System.out.print("A soma é: "+soma);
     }
     public void exercicio4(){
+        /*
+        Faça um programa que apresente um menu de opções (no terminal) para o calculo das seguintes operações entre dois
+         números: adição (opção 1) ;subtração (opção 2); multiplicação (opção 3); divisão (opção 4); sair (opção 5).
+         O programa deve possibilitar ao usuário a escolha da operação desejada, entrada dos números e a exibição
+        do resultado e a volta ao menu de opções. O programa só termina quando for escolhida a opção de saída (opção 5).
+        */
         while (true){
-            System.out.print();
+            System.out.println("\nMENU DE CÁLCULOS");
+            System.out.println("[1] - Adição");
+            System.out.println("[2] - Subtração");
+            System.out.println("[3] - Multiplicação");
+            System.out.println("[4] - Divisão");
+            System.out.println("[5] - Sair");
+            System.out.print("Sua escolha: ");
+            Scanner scanner = new Scanner(System.in);
+            int escolha = scanner.nextInt();
+            float numA, numB;
+            switch (escolha){
+                case 1:
+                    System.out.print("Digite o primeiro número: ");
+                    numA = scanner.nextInt();
+                    System.out.print("\nDigite o segundo número: ");
+                    numB = scanner.nextInt();
+                    float soma = numA+numB;
+                    System.out.printf("O resultado da soma de %.2f e %.2f é %.2f\n", numA,numB,soma);
+                    break;
+                case 2:
+                    System.out.print("Digite o primeiro número: ");
+                    numA = scanner.nextInt();
+                    System.out.print("\nDigite o segundo número: ");
+                    numB = scanner.nextInt();
+                    float subtracao = numA-numB;
+                    System.out.printf("O resultado da subtração de %.2f e %.2f é %.2f\n", numA,numB,subtracao);
+                    break;
+                case 3:
+                    System.out.print("Digite o primeiro número: ");
+                    numA = scanner.nextInt();
+                    System.out.print("\nDigite o segundo número: ");
+                    numB = scanner.nextInt();
+                    float multi = numA*numB;
+                    System.out.printf("O resultado da multiplicação entre %.2f e %.2f é %.2f\n", numA,numB,multi);
+                    break;
+                case 4:
+                    System.out.print("Digite o primeiro número: ");
+                    numA = scanner.nextInt();
+                    System.out.print("\nDigite o segundo número: ");
+                    numB = scanner.nextInt();
+                    float divisao = numA/numB;
+                    System.out.printf("O resultado da divisão de %.2f por %.2f é %.2f\n", numA,numB,divisao);
+                    break;
+                case 5:
+                    return;
+            }
         }
     }
     public void exercicio5(){
