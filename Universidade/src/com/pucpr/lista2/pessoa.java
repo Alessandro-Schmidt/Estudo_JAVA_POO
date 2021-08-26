@@ -1,12 +1,13 @@
 package src.com.pucpr.lista2;
 
 import java.lang.invoke.StringConcatFactory;
+import java.util.Date;
 import java.util.Scanner;
 
 public class pessoa {
     Scanner input = new Scanner(System.in);
     private String nome = "Alessandro";
-    private String nascimento = "28.04.2001";
+    private Date nascimento = 2001-04-28;
     private float altura = 1.7f;
 
     /*
