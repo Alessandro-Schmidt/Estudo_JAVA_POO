@@ -3,7 +3,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 public class Main {
-    public static void lista1(String[] args) {
+    public static void lista2(String[] args) {
         // Exercício 1.
         //Pessoa Alessandro = new Pessoa();
         //Alessandro.status();
