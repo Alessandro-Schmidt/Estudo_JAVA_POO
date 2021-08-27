@@ -79,4 +79,19 @@ public class veículo {
         this.litrosTanque = litrosTanque;
         this.kmPorLitro = kmPorLitro;
     }
+    public double percentualLitrosTanque(){
+        return 100.0f * litrosTanque/maxCapacidadeTanque;
+    }
+    public double autonomiaRestante(){
+        return kmPorLitro*litrosTanque;
+    }
+    public void Status(){
+        System.out.println(marca+" "+modelo+" "+cor+" ("+ano+")");
+        System.out.println("Cabe "+numPassageiros+" passageiros.");
+        System.out.println("Tanque tem "+litrosTanque+ "l/"+maxCapacidadeTanque);
+        System.out.println("consumo: "+kmPorLitro);
+        System.out.println("Consumo "+kmPorLitro+" km/l");
+        System.out.println("Autonomia "+autonomiaRestante()+" km");
+    }
+
 }
