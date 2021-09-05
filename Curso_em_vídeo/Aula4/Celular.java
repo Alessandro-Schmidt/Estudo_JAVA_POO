@@ -10,6 +10,7 @@ public class Celular {
 
     public Celular() {
     }
+    // O constructor vazio serve para adequar às possíveis variáveis de um objeto valores null ou 0
 
     public Celular(int numero, String modelo) {
         this.numero = numero;
