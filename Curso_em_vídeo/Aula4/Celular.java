@@ -15,5 +15,20 @@ public class Celular {
         this.numero = numero;
         this.modelo = modelo;
     }
-    
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 }
