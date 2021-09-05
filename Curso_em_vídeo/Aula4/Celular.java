@@ -18,11 +18,11 @@ public class Celular {
     }
 
     public int getNumero() {
-        return numero;
+        return this.numero;
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setNumero(int numero) {
