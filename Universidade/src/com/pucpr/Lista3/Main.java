@@ -1,9 +1,18 @@
 package src.com.pucpr.Lista3;
 
 public class Main {
+
     public static void main(String[] args) {
-        Temperaturas conversor = new Temperaturas(24, MedidasTemperaturas.Celcius);
+	// write your code here
+        ConversorTemperatura conversor =
+                new ConversorTemperatura(
+                24,MedidaTemperatura.Fahrenheit
+        );
         conversor.printStatus();
-        conversor.converter(MedidasTemperaturas.Celcius);
+        //conversor.converter(MedidaTemperatura.Celsius);
+        conversor.converter(MedidaTemperatura.Kelvin);
+        conversor.printStatus();
+
+
     }
 }

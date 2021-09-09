@@ -1,7 +1,7 @@
 package src.com.pucpr.Lista3;
 
-public enum MedidasTemperaturas {
-    Celcius,
+public enum MedidaTemperatura {
+    Celsius,
     Kelvin,
     Fahrenheit
 }
