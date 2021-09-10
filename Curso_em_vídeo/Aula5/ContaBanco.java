@@ -19,6 +19,7 @@ public class ContaBanco {
     }
 
     public void estadoAtual(){
+        System.out.println("-----------------------");
         System.out.println("Conta: "+ this.getNumConta());
         System.out.println("Tipo: "+ this.getTipo());
         System.out.println("Dono: "+this.getDono());
@@ -40,7 +41,7 @@ public class ContaBanco {
     public void depositar(float v){
         if (this.isStatus()){
             this.setSaldo(this.getSaldo()+v);
-            System.out.printf("Você depositou %f, seu saldo é de:\nR$ %f\n",v, getSaldo());
+            System.out.printf("\nVocê depositou %.2f na conta %d, seu saldo é de:\nR$ %.2f\n",v,getNumConta(), getSaldo());
         }else{
             System.out.println("\nImpossível depositar em conta fechada.\n");
         }
@@ -50,7 +51,7 @@ public class ContaBanco {
         if (this.isStatus()){
             if (this.getSaldo()>=v){
                 this.setSaldo(getSaldo()-v);
-                System.out.printf("Você sacou %f, seu saldo é de:\nR$ %f\n",v, getSaldo());
+                System.out.printf("\nVocê sacou %.2f da conta %d, seu saldo é de:\nR$ %.2f\n",v, getNumConta(),getSaldo());
             }else{
                 System.out.print("Você não possui este valor na sua conta.\n");
             }
