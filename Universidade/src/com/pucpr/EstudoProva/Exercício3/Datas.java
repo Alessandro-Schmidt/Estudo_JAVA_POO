@@ -1,35 +1,44 @@
 package src.com.pucpr.EstudoProva.Exercício3;
-
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Datas {
-    private int dias;
-    private int mês;
-    private int ano;
+    private int dia,mes,ano;
 
-    // Constructors:
-
-    public Datas() {
-       // System.out.println(data);
+    public Datas(int dia, int mes, int ano) {
+        setDia(dia);
+        setMes(mes);
+        this.ano = ano;
     }
 
-
-    // Métodos getters e setters
-
-    public int getDias() {
-        return dias;
+    public Datas(){
+        LocalDate localDate = LocalDate.now();
+        setDia(localDate.getDayOfMonth());
+        setMes(localDate.getMonthValue());
+        setAno(localDate.getYear());
     }
 
-    public void setDias(int dias) {
-        this.dias = dias;
+    public void printStatus(){
+        System.out.println(getDia()+"/"+getMes()+"/"+getAno());
     }
 
-    public int getMês() {
-        return mês;
+    public int getDia() {
+        return dia;
     }
 
-    public void setMês(int mês) {
-        this.mês = mês;
+    public void setDia(int dia) {
+        if(dia > 0 && dia <= 31)
+            this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        if(mes > 0 && mes <=12)
+            this.mes = mes;
     }
 
     public int getAno() {
