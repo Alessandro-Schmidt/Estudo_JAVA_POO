@@ -4,19 +4,14 @@ import java.time.ZoneId;
 import java.util.Date;
 
 public class Datas {
-    private int dia,mes,ano;
+    LocalDate localDate;
 
     public Datas(int dia, int mes, int ano) {
-        setDia(dia);
-        setMes(mes);
-        this.ano = ano;
+        localDate = LocalDate.parse(ano+"-"+mes+"-"+dia);
     }
 
     public Datas(){
-        LocalDate localDate = LocalDate.now();
-        setDia(localDate.getDayOfMonth());
-        setMes(localDate.getMonthValue());
-        setAno(localDate.getYear());
+        localDate = LocalDate.now();
     }
 
     public void printStatus(){
@@ -24,28 +19,30 @@ public class Datas {
     }
 
     public int getDia() {
-        return dia;
+        return localDate.getDayOfMonth();
     }
 
     public void setDia(int dia) {
-        if(dia > 0 && dia <= 31)
-            this.dia = dia;
+        localDate = LocalDate.parse(getAno()+"-"+getMes()+"-"+dia);
     }
 
     public int getMes() {
-        return mes;
+        return localDate.getMonthValue();
     }
 
     public void setMes(int mes) {
-        if(mes > 0 && mes <=12)
-            this.mes = mes;
+        localDate = LocalDate.parse(getAno()+"-"+mes+"-"+getDia());
     }
 
     public int getAno() {
-        return ano;
+        return localDate.getYear();
     }
 
     public void setAno(int ano) {
-        this.ano = ano;
+        localDate = LocalDate.parse(ano+"-"+getMes()+"-"+getDia());
+    }
+
+    public void adicionarUmDia(){
+        localDate = localDate.plusDays(1);
     }
 }
