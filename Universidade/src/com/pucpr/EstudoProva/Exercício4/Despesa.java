@@ -7,7 +7,8 @@ public class Despesa {
     private float value;
     private LocalDate localDate;
 
-    public Despesa(String description, float value, int dia, int mes, int ano) {
+    public Despesa(String description, float value,
+                   int dia, int mes,int ano) {
         this.description = description;
         this.value = value;
         setLocalDate(dia,mes,ano);
@@ -36,8 +37,7 @@ public class Despesa {
     public void setLocalDate(int dia,int mes,int ano) {
         this.localDate = LocalDate.parse(ano+"-"+mes+"-"+dia);
     }
-
     public void printStatus(){
-        System.out.println(getDate() + " - ");
+        System.out.println(getDate() + " - " + getDescription() + " : R$"+getValue());
     }
 }

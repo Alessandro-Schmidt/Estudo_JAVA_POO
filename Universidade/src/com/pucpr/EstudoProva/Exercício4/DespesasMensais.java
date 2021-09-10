@@ -4,40 +4,33 @@ import java.util.ArrayList;
 
 public class DespesasMensais {
     private String nomeMes;
-    private ArrayList<Despesa> despesas = new ArrayList<>();
+    private ArrayList<Despesa> despesas;
 
-    public DespesasMensais(String nomeMes){
+    public DespesasMensais(String nomeMes) {
         this.nomeMes = nomeMes;
+        this.despesas = new ArrayList<>();
     }
-
     public void addDespesa(Despesa despesa){
-        despesas.add(despesa);
+        this.despesas.add(despesa);
     }
-
     public void removeDespesa(Despesa despesa){
-        despesas.remove(despesa);
+        this.despesas.remove(despesa);
     }
-
     public float getTotalDespesas(){
-        float total =0.0f;
-        for (Despesa d:despesas){
-            total+=this.getValue();
+        float total = 0.0f;
+        for (Despesa d:despesas) {
+            total += d.getValue();
         }
+        /*for (int i = 0; i < despesas.size(); i++) {
+            total += despesas.get(i).getValue();
+        }*/
+        return total;
     }
-
-    public String getNomeMes() {
-        return nomeMes;
-    }
-
-    public void setNomeMes(String nomeMes) {
-        this.nomeMes = nomeMes;
-    }
-
-    public ArrayList<Despesa> getDespesas() {
-        return despesas;
-    }
-
-    public void setDespesas(ArrayList<Despesa> despesas) {
-        this.despesas = despesas;
+    public void printStatus(){
+        System.out.println("---"+this.nomeMes + "---");
+        for (Despesa d:despesas){
+            d.printStatus();
+        }
+        System.out.println("Total: R$"+getTotalDespesas());
     }
 }
