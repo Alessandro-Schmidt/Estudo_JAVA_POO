@@ -1,5 +1,7 @@
 package src.com.pucpr.EstudoProva.Exercicio1;
 
+import java.util.Locale;
+
 public class Invoice {
     private int numItem;
     private String descricao;
@@ -12,8 +14,10 @@ public class Invoice {
         System.out.println("Código do produto: "+this.getNumItem());
         System.out.println("Descrição: "+this.getDescricao());
         System.out.println("Quantidade comprada: "+this.getQtddComprada());
-        System.out.println("Preço / Unidade: R$ "+this.getPrecoUnitario());
-        System.out.printf("Valor final: R$ %.2f\n",this.getInvoiceAmount());
+        String preco = String.format(Locale.FRENCH, "%.2f", getPrecoUnitario()); // Esse comando formata para o formato de dinheiro do BR, no caso, o da frança é igual ao do BRasil
+        String precoTotal = String.format(Locale.FRENCH, "%.2f", getInvoiceAmount());
+        System.out.println("Preço / Unidade: R$ "+preco);
+        System.out.printf("Valor final: R$"+ precoTotal+ "\n");
         System.out.println("------------------");
     }
 

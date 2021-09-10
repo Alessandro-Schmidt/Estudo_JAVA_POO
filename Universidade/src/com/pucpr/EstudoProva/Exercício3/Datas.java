@@ -10,7 +10,7 @@ public class Datas {
     // Constructors:
 
     public Datas() {
-        System.out.println(data);
+       // System.out.println(data);
     }
 
 
