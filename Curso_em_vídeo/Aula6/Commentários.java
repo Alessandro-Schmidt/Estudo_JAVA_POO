@@ -27,11 +27,39 @@ public class Commentários {
     que usem uma pilha AA);
     3 - Reduzir o efeito colateral (Encostar na pilha, pode causar danos a pilha e ao usuário);
     EX:
-    O chasssi do carro é uma capsula para o que acontece no motor, e os pedais e setas, são as interfaces. 
+    O chasssi do carro é uma capsula para o que acontece no motor, e os pedais e setas, são as interfaces.
 
+    Diagrama UML:
+    interface se declara parecido com uma classe, mas ela não possui atributos, apenas métodos;
+    <<interface>>
+    Controlador
+    métodos:
+    + ligar() (public);
+    + Desligar();
+    + Abrir menu()
+    + mutar();
+    + Play()
+    + pause()
+    + mais_vol()
+    + menos_vol() -- Estes são todos métodos abstratos, pois eles não serào desenvolvidos na inetrface,
+    mas vão existir na classe
 
-
-
+    Definir a classe:
+    Controle
+    atributos:
+    - volume (private)
+    - ligado
+    - tocando
+    Métodos:
+    + ligar() (public);
+    + Desligar();
+    + Abrir menu()
+    + mutar();
+    + Play()
+    + pause()
+    + mais_vol()
+    + menos_vol()
+    getter e setter de cada atributo privados! 
 
 
 
