@@ -59,9 +59,6 @@ public class Commentários {
     + pause()
     + mais_vol()
     + menos_vol()
-    getter e setter de cada atributo privados! 
-
-
-
+    getter e setter de cada atributo privados!
     * */
 }
