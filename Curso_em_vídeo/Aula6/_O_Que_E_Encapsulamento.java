@@ -1,6 +1,6 @@
 package Aula6;
 
-public class Commentários {
+public class _O_Que_E_Encapsulamento {
     /*
     Aula sobre encapsulamento. 
     Pilares da Programação Orientada a Objetos:
