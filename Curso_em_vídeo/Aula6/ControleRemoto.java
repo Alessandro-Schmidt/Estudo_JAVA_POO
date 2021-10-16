@@ -7,27 +7,27 @@ public class ControleRemoto implements Controlador {
     private boolean tocando;
 
     // Getter e Setter
-    public int getVolume() {
+    private int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
+    private void setVolume(int volume) {
         this.volume = volume;
     }
 
-    public boolean getLigado() {
+    private boolean getLigado() {
         return ligado;
     }
 
-    public void setLigado(boolean ligado) {
+    private void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
 
-    public boolean getTocando() {
+    private boolean getTocando() {
         return tocando;
     }
 
-    public void setTocando(boolean tocando) {
+    private void setTocando(boolean tocando) {
         this.tocando = tocando;
     }
 
@@ -51,11 +51,17 @@ public class ControleRemoto implements Controlador {
 
     @Override
     public void abrirMenu() {
-        System.out.println("Está ligado? "+ this.getLigado());
-        System.out.println("Está tocando? "+this.getTocando();
-        System.out.println("Volume: "+ this.getVolume());
-        for (int i = 0; i<= this.getVolume(); i+=10){
-            System.out.println("I");
+        if (getLigado()){
+            System.out.println("----- MENU -----");
+            System.out.println("Está ligado? "+ this.getLigado());
+            System.out.println("Está tocando? "+this.getTocando());
+            System.out.println("Volume: "+ this.getVolume());
+            for (int i = 0; i<= this.getVolume(); i+=10){
+                System.out.print("I");
+        }
+            System.out.println("\n----------------");
+        } else{
+            System.out.println("A Televisão está desligada.");
         }
     }
 
@@ -66,8 +72,10 @@ public class ControleRemoto implements Controlador {
 
     @Override
     public void maisVolume() {
-        if (getLigado() && getVolume()<10){
-            setVolume(getVolume()+1);
+        if (getLigado() && getVolume()<100){
+            setVolume(getVolume()+5);
+        } else{
+            System.out.println("Ou a Televisão está desligada, ou o volume já está no máximo");
         }
     }
 
@@ -75,27 +83,37 @@ public class ControleRemoto implements Controlador {
     public void menosVolume() {
         if (getLigado() && getVolume()>0){
             setVolume(getVolume()-1);
+        }else{
+            System.out.println("Volume já está em "+ getVolume());
         }
     }
 
     @Override
     public void ligarMudo() {
-        
+        if (getLigado() && getVolume()>0){
+            setVolume(0);
+        }
     }
 
     @Override
     public void desligarMudo() {
-
+        if (getLigado() && getVolume()==0){
+            setVolume(50);
+        }
     }
 
     @Override
     public void play() {
-
+        if (getLigado() && !(getTocando())){
+            setTocando(true);
+        }
     }
 
     @Override
     public void pause() {
-
+        if (getLigado() && getTocando()){
+            setTocando(false);
+        }
     }
 
     // Métodos Abstratos:
